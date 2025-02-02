@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calculadora de Factorial{% endblock %}
+
+{% block body %}
+    <h1>Calculadora de Factorial</h1>
+<body style="background-color: #ffffff;">
+
+    <form method="post">
+        <label for="num">Número:</label>
+        <input type="number" name="num" id="num" required>
+
+        <button type="submit">Calcular</button>
+    </form>
+    {% if resultado is not null %}
+        <h2>'El factorial de {{ num }} es: '{{ resultado }}</h2>
+    {% endif %}
+{% endblock %}

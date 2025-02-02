@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cabecera</title>
+    <style>
+      header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Ejercicios probados</h1>
+    <nav>
+        <a href="{{ path('hola') }}">Saludo</a>
+        <a href="{{ path('producto', { 'num1': 34, 'num2': 4 }) }}">Multiplicación</a>
+        <a href="{{ path('product1') }}">Producto</a>
+        <a href="{{ path('factorial1') }}">Factorial</a>
+        <a href="{{ path('factorial', { 'n': 5 }) }}">Factorial de 5</a>
+        <a href="{{ path('positivo', { 'numero': -321 }) }}">Positivo o Negativo</a>
+        <a href="{{ path('tabla') }}">Tabla</a>
+        <a href="{{ path('testRequest') }}">IP</a>
+        <a href="{{ path('session1') }}">Session</a>
+        <a href="{{ path('app_equipo') }}">Listar Equipos</a>
+        <a href="{{ path('findEquipo') }}">Buscar Equipo</a>
+    </nav>
+</header>
+</body>
+</html>

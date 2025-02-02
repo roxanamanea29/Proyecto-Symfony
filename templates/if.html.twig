@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Número positivo o negativo{% endblock %}
+
+{% block body %}
+<body style="background-color: #ffffff;">
+
+<h1 style="text-align: center">Número positivo o negativo</h1>
+    {% if numero > 0 %}
+   <p style="text-align: center">El número {{ numero }} es positivo</p>
+    {% elseif numero == 0 %}
+    {% else %}
+        <p style="text-align: center">El número {{ numero }} es negativo o igual a cero</p>
+    {% endif %}
+{% endblock %}

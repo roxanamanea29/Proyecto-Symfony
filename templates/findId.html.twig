@@ -1,0 +1,29 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Buscar Equipo por ID{% endblock %}
+
+{% block body %}
+<body style="background-color: #ffffff;">
+    <header>
+        {{ include('cabecera.html.twig') }}
+    </header>
+    <h1>Buscar Equipo por ID</h1>
+
+    <form method="post">
+        <label for="id">Ingrese el ID:</label>
+        <input type="number" name="id" id="id" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if equipo is defined and equipo is not empty %}
+        <h1>Detalles del Equipo</h1>
+        <p><strong>ID:</strong> {{ equipo.id }}</p>
+        <p><strong>Nombre:</strong> {{ equipo.nombre }}</p>
+        <p><strong>Fecha de Fundación:</strong> {{ equipo.fundacion }}</p>
+        <p><strong>Número de Socios:</strong> {{ equipo.socios }}</p>
+        <p><strong>Ciudad:</strong> {{ equipo.ciudad }}</p>
+    {% elseif equipo is defined %}
+        <p>⚠️ No se encontró ningún equipo con ese ID.</p>
+    {% endif %}
+{% endblock %}
