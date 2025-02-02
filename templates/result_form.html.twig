@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Resultado{% endblock %}
+
+{% block body %}
+<body style="background-color: #ffffff;">
+    <h1>Datos Introducidos</h1>
+
+    {% if nombre is defined and apellidos is defined %}
+
+        <table border="1" style="width: 50%; margin: 20px auto">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+            </tr>
+
+            </thead>
+            <tbody>
+                <tr><td>{{ nombre }}</td>
+                    <td>{{ apellidos }}</td>
+                </tr>
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay datos disponibles.</p>
+    {% endif %}
+{% endblock %}

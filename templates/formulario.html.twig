@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulario{% endblock %}
+
+{% block body %}
+<body style="background-color: #ffffff;">
+    <h1>Formulario de Nombre y Apellidos</h1>
+    {{ form_start(formulario) }}
+    {{ form_widget(formulario) }}
+    {{ form_end(formulario) }}
+{% endblock %}
